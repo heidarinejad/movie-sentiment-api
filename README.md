@@ -97,6 +97,25 @@ Open Swagger documentation:
 
 http://127.0.0.1:8000/docs
 
+```
+
+Endpoint:
+
+POST /predict
+
+Request:
+```json
+{
+  "text": "This movie was amazing!"
+}
+
+Response
+
+{
+  "prediction": "positive",
+  "confidence": 0.9923
+}
+
 
 
 
