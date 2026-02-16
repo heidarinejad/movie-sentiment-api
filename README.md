@@ -1,9 +1,4 @@
 
-That is **three backticks**, not single quotes.
-
-Below is a fully corrected, clean, professional README template.  
-You can copy this directly into `README.md` and GitHub will render it perfectly.
-
 ---
 
 # 🎬 Movie Review Sentiment Classification API
@@ -46,6 +41,7 @@ Exploratory analysis includes:
 - Data quality checks
 
 Generated plots are saved in:
+
 
 
 
