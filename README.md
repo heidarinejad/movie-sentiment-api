@@ -205,12 +205,11 @@ movie-sentiment-api/
 
 ```
 
+## ⚙️ How to Train the Model
 
+To retrain the model:
 
+```bash
+python src/train.py
 
-
-
-
-
-
-
+```
