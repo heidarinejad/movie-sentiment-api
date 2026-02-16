@@ -42,6 +42,63 @@ Exploratory analysis includes:
 
 Generated plots are saved in:
 
+/reports
+
+
+---
+
+## 🧠 Model Development
+
+Two machine learning models were trained using TF-IDF features:
+
+### 1. Logistic Regression
+- TF-IDF Vectorizer (max_features=20000)
+- LogisticRegression (max_iter=1000)
+
+### 2. Linear Support Vector Classifier
+- TF-IDF Vectorizer (max_features=20000)
+- LinearSVC
+
+Both models were evaluated and compared.
+
+✅ Final selected model for deployment: **Logistic Regression**  
+(better performance and supports probability output)
+
+---
+
+## 📈 Model Performance
+
+Accuracy: ~89–90%
+
+Evaluation metrics:
+
+- Confusion Matrix
+- ROC Curve (AUC)
+- Precision–Recall Curve
+- Feature importance visualization
+
+All evaluation artifacts are saved in:
+
+/reports
+
+
+---
+
+## 🚀 API Usage
+
+The trained model is deployed using FastAPI.
+
+### ▶ Run Locally
+
+```bash
+uvicorn app.main:app --reload
+
+Open Swagger documentation:
+
+http://127.0.0.1:8000/docs
+
+
+
 
 
 
