@@ -116,6 +116,94 @@ Response
   "confidence": 0.9923
 }
 
+```
+
+🧾 Response Fields
+
+prediction → Sentiment label (positive or negative)
+
+confidence → Model probability score (between 0 and 1)
+
+# 🐳 Docker Deployment
+
+## 🔨 Build Docker Image
+
+```bash
+docker build -t movie-sentiment-api .
+
+```
+
+# ▶ Run Docker Container
+
+```bash
+docker run -p 8000:8000 movie-sentiment-api
+
+```
+
+Then access:
+
+```bash
+http://localhost:8000/docs
+
+```
+
+## 🧠 Model Training
+
+To retrain the model from scratch:
+
+```bash
+python src/train.py
+
+```
+
+The training pipeline will:
+
+Load and clean the dataset
+
+Split training and testing data
+
+Train Logistic Regression and Linear SVM
+
+Compare model performance
+
+Automatically select the best model
+
+Save the final model to /saved_model
+
+Generate evaluation plots in /reports
+
+## 📁 Project Structure
+
+```css
+movie-sentiment-api/
+│
+├── app/
+│   ├── main.py
+│   └── __init__.py
+│
+├── src/
+│   └── train.py
+│
+├── dataset/
+│   └── IMDB_Dataset.csv
+│
+├── reports/
+│   ├── confusion_matrix.png
+│   ├── roc_curve.png
+│   ├── precision_recall_curve.png
+│   └── feature_importance.png
+│
+├── saved_model/
+│   └── sentiment_model.joblib
+│
+├── notebooks/
+│   └── sentiment_analysis.ipynb
+│
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
+```
 
 
 
